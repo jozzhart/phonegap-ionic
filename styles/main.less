@@ -1,0 +1,20 @@
+@bootstrap : "../components/bootstrap/dist";
+@import (less) "@{bootstrap}/css/bootstrap.min.css";
+@import "less/scss";
+@import "less/mixins";
+@import "less/theme";
+@import "less/specifics";
+
+body {
+  margin-top: 70px;
+  height : 100%;
+}
+
+.wrapper {
+  .fullscreen;
+  top: 50px;
+}
+
+.canvas {
+  .fullscreen;
+}

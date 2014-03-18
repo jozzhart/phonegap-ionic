@@ -1,0 +1,26 @@
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" bs-navbar>
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">Comrades</a>
+  </div>
+  <ul class="nav navbar-nav">
+    <li class="dropdown">
+      <a href class="dropdown-toggle" data-toggle="dropdown" ng-click="toggleBoard()">Comrades <b class="caret"></b></a>
+      <ul class="dropdown-menu" ng-show="boardToggle">
+        <li><a href="/#/board/new">Item</a></li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation" ng-repeat-end></li>
+      </ul>
+    </li>
+  </ul>
+  <div class="navbar-right" ng-hide="user">
+    <a class="btn btn-primary navbar-btn space-right-10" href="/auth/facebook">Login via Facebook</a>
+  </div>
+  <ul class="nav navbar-nav navbar-right space-right-10" ng-show="user">
+    <li class="dropdown">
+      <a href class="dropdown-toggle" data-toggle="dropdown" ng-click="toggle = !toggle">{{user.email}} <b class="caret"></b></a>
+      <ul class="dropdown-menu" ng-show="toggle">
+        <li><a href="/auth/logout">Log out</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
