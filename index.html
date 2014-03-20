@@ -23,7 +23,7 @@
         <!-- endbuild -->
 
   </head>
-  <body class="" ng-app="app">
+  <body class="" ng-app="app" onload="init();">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -81,10 +81,25 @@
 
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-
-
-
     </script>
+
+    <script type="text/javascript" charset="utf-8">
+ 
+                        var showMessageBox = function() {
+ 
+                             navigator.notification.alert("Hello World of PhoneGap");
+ 
+                        }
+ 
+                        function init(){
+ 
+                             document.addEventListener("deviceready", showMessageBox, true);               
+ 
+                        }
+ 
+  </script>
+
+  
 
 </body>
 </html>
