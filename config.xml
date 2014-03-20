@@ -48,6 +48,7 @@
 
     <!-- Plugins can also be added here. -->
     <gap:plugin name="com.testflightapp.cordova-plugin" />
+    <gap:plugin name="org.apache.cordova.geolocation" version="0.3.6" />
     <!--
         <gap:plugin name="Example" />
         A list of available plugins are available at https://build.phonegap.com/docs/plugins
