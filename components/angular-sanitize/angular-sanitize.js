@@ -1,5 +1,5 @@
 /**
- * @license AngularJS v1.2.14
+ * @license AngularJS v1.2.12
  * (c) 2010-2014 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -8,7 +8,7 @@
 var $sanitizeMinErr = angular.$$minErr('$sanitize');
 
 /**
- * @ngdoc module
+ * @ngdoc overview
  * @name ngSanitize
  * @description
  *
@@ -16,6 +16,7 @@ var $sanitizeMinErr = angular.$$minErr('$sanitize');
  *
  * The `ngSanitize` module provides functionality to sanitize HTML.
  *
+ * {@installModule sanitize}
  *
  * <div doc-module-components="ngSanitize"></div>
  *
@@ -41,7 +42,7 @@ var $sanitizeMinErr = angular.$$minErr('$sanitize');
 
 /**
  * @ngdoc service
- * @name $sanitize
+ * @name ngSanitize.$sanitize
  * @function
  *
  * @description
@@ -57,8 +58,8 @@ var $sanitizeMinErr = angular.$$minErr('$sanitize');
  * @returns {string} Sanitized html.
  *
  * @example
-   <example module="ngSanitize" deps="angular-sanitize.js">
-   <file name="index.html">
+   <doc:example module="ngSanitize">
+   <doc:source>
      <script>
        function Ctrl($scope, $sce) {
          $scope.snippet =
@@ -102,8 +103,8 @@ var $sanitizeMinErr = angular.$$minErr('$sanitize');
          </tr>
        </table>
        </div>
-   </file>
-   <file name="protractor.js" type="protractor">
+   </doc:source>
+   <doc:protractor>
      it('should sanitize the html snippet by default', function() {
        expect(element(by.css('#bind-html-with-sanitize div')).getInnerHtml()).
          toBe('<p>an html\n<em>click here</em>\nsnippet</p>');
@@ -133,8 +134,8 @@ var $sanitizeMinErr = angular.$$minErr('$sanitize');
        expect(element(by.css('#bind-default div')).getInnerHtml()).toBe(
          "new &lt;b onclick=\"alert(1)\"&gt;text&lt;/b&gt;");
      });
-   </file>
-   </example>
+   </doc:protractor>
+   </doc:example>
  */
 function $SanitizeProvider() {
   this.$get = ['$$sanitizeUri', function($$sanitizeUri) {
@@ -399,7 +400,7 @@ function decodeEntities(value) {
  * resulting string can be safely inserted into attribute or
  * element text.
  * @param value
- * @returns {string} escaped text
+ * @returns escaped text
  */
 function encodeEntities(value) {
   return value.
@@ -475,7 +476,7 @@ angular.module('ngSanitize', []).provider('$sanitize', $SanitizeProvider);
 
 /**
  * @ngdoc filter
- * @name linky
+ * @name ngSanitize.filter:linky
  * @function
  *
  * @description
@@ -492,8 +493,8 @@ angular.module('ngSanitize', []).provider('$sanitize', $SanitizeProvider);
    <span ng-bind-html="linky_expression | linky"></span>
  *
  * @example
-   <example module="ngSanitize" deps="angular-sanitize.js">
-     <file name="index.html">
+   <doc:example module="ngSanitize">
+     <doc:source>
        <script>
          function Ctrl($scope) {
            $scope.snippet =
@@ -537,8 +538,8 @@ angular.module('ngSanitize', []).provider('$sanitize', $SanitizeProvider);
            <td><div ng-bind="snippet"></div></td>
          </tr>
        </table>
-     </file>
-     <file name="protractor.js" type="protractor">
+     </doc:source>
+     <doc:protractor>
        it('should linkify the snippet with urls', function() {
          expect(element(by.id('linky-filter')).element(by.binding('snippet | linky')).getText()).
              toBe('Pretty text with some links: http://angularjs.org/, us@somewhere.org, ' +
@@ -569,8 +570,8 @@ angular.module('ngSanitize', []).provider('$sanitize', $SanitizeProvider);
             toBe('http://angularjs.org/');
         expect(element(by.css('#linky-target a')).getAttribute('target')).toEqual('_blank');
        });
-     </file>
-   </example>
+     </doc:protractor>
+   </doc:example>
  */
 angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
   var LINKY_URL_REGEXP =
