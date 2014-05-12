@@ -12,18 +12,50 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="css/main.css">
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel='stylesheet' href='fullcalendar/fullcalendar/fullcalendar.css' />
+        <link rel='stylesheet' href='fullcalendar/fullcalendar/fullcalendar.print.css' media='print' />
 
-        <script src="http://maps.googleapis.com/maps/api/js?libraries=weather,visualization,places&sensor=true&language=en&v=3.14"></script>
+        <link rel="stylesheet" href="components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="components/angular-motion/dist/angular-motion.css">
+        <link rel="stylesheet" href="components/ionic/release/css/ionic.css">
+
+        <!-- endbuild -->
 
   </head>
   <body class="" ng-app="app" onload="init();">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
 
     <!-- Add your site or application content here -->
     <div id="wrapper" class="wrapper" ui-view=""></div>
 
-    <script src="phonegap.js"></script>
-    <script src="js/app.js"></script>
+    <script type="text/javascript" src="phonegap.js"></script>
+
+
+    <script src="components/jquery/dist/jquery.min.js"></script>
+    <script src="components/underscore/underscore-min.js"></script>
+    <script src="components/moment/moment.js"></script>
+    <script src="components/ionic/release/js/ionic.bundle.js"></script>
+    <script src="components/angular-sanitize/angular-sanitize.min.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/login.js"></script>
+    <script src="scripts/controllers/nav.js"></script>
+    <script src="scripts/services/user.js"></script>
+    <script src="scripts/services/event.js"></script>
+
+    <script src='fullcalendar/lib/jquery-ui.custom.min.js'></script>
+    <script src='fullcalendar/fullcalendar/fullcalendar.min.js'></script>
+
+    <!-- endbuild -->
 
     <script type="text/javascript">
         WebView.setWebContentsDebuggingEnabled(true);
@@ -62,5 +94,5 @@
       }
 
     </script>
-</body>
+  </body>
 </html>
