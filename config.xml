@@ -48,7 +48,7 @@
 
     <!-- Plugins can also be added here.
     <gap:plugin name="Notification" value="org.apache.cordova.core.Notification" /> -->
-    <gap:plugin value="org.apache.cordova.Notification"/>
+    <gap:plugin name="org.apache.cordova.Notification"/>
     <!--
         <gap:plugin name="Example" />
         A list of available plugins are available at https://build.phonegap.com/docs/plugins
