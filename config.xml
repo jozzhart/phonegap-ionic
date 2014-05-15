@@ -47,7 +47,6 @@
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
 
     <!-- Plugins can also be added here. -->
-    <gap:plugin name="Device" value="org.apache.cordova.core.Device"/>
     <gap:plugin name="Geolocation" value="org.apache.cordova.core.GeoBroker" />
     <!--
         <gap:plugin name="Example" />
