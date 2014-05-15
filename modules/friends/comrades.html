@@ -9,7 +9,7 @@
       <h2>{{ friend.name }}</h2>
       <h4>{{ friend.email }}</h4>
       <label class="toggle toggle-positive">
-        <input type="checkbox">
+        <input type="checkbox" ng-model="friend.checkbox" ng-change="buttonToggle(this.friend)">
         <div class="track">
          <div class="handle"></div>
         </div>
