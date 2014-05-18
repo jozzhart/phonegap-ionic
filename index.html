@@ -12,11 +12,9 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/main.css">
 
-        <script src="http://maps.googleapis.com/maps/api/js?libraries=weather,visualization,places&sensor=true&language=en&v=3.14"></script>
-
-        <script src="http://debug.phonegap.com/target/target-script-min.js#jozzzaaaaaa"></script>
+      <script src="http://maps.googleapis.com/maps/api/js?libraries=weather,visualization,places&sensor=true&language=en&v=3.14"></script>
 
   </head>
   <body class="" ng-app="app" onload="init();">
@@ -32,7 +30,7 @@
     <script src="//cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
 
     <script type="text/javascript">
-      document.addEventListener("deviceready", showMessageBox, true);
+      // document.addEventListener("deviceready", showMessageBox, true);
 
         //WebView.setWebContentsDebuggingEnabled(true);
 
@@ -61,12 +59,16 @@
 
     <script type="text/javascript" charset="utf-8">
 
-      var showMessageBox = function() {
-           navigator.notification.alert("Hello World of PhoneGap");
-      }
+      // var showMessageBox = function() {
+      //      navigator.notification.alert("Hello World of PhoneGap");
+      // }
 
-      function init(){
-           document.addEventListener("deviceready", showMessageBox, true);
+      // function init(){
+      //      document.addEventListener("deviceready", showMessageBox, true);
+      // }
+
+      if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+          WebView.setWebContentsDebuggingEnabled(true);
       }
 
     </script>
