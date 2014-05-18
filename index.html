@@ -56,14 +56,8 @@
 
     <script type="text/javascript" charset="utf-8">
 
-      // var showMessageBox = function() {
-      //      navigator.notification.alert("Hello World of PhoneGap");
-      // }
-
       document.addEventListener("deviceready", function () {
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-          WebView.setWebContentsDebuggingEnabled(true);
-        }
+        navigator.notification.alert("Hello World of PhoneGap");
       });
 
     </script>
