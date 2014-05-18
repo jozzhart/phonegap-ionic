@@ -17,7 +17,7 @@
       <script src="http://maps.googleapis.com/maps/api/js?libraries=weather,visualization,places&sensor=true&language=en&v=3.14"></script>
 
   </head>
-  <body class="" ng-app="app" onload="init();">
+  <body class="" ng-app="app">
 
     <!-- Add your site or application content here -->
     <div id="wrapper" class="wrapper" ui-view=""></div>
@@ -60,12 +60,10 @@
       //      navigator.notification.alert("Hello World of PhoneGap");
       // }
 
-      function init(){
-        //document.addEventListener("deviceready", showMessageBox, true);
-      }
-
-      if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-        WebView.setWebContentsDebuggingEnabled(true);
+      document.addEventListener("deviceready", function () {
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+          WebView.setWebContentsDebuggingEnabled(true);
+        }
       }
 
     </script>
