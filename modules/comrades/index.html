@@ -4,20 +4,16 @@
 </ion-header-bar>
 <ion-content padding="false" scroll="true">
   <div class="list">
-    <li ng-repeat="friend in suggested" class="item item-thumbnail-left item-toggle">
+    <li ng-repeat="friend in comrades" class="item item-thumbnail-left item-toggle">
       <img ng-src="{{ friend.picture }}">
       <h2>{{ friend.name }}</h2>
       <h4>{{ friend.email }}</h4>
-      <h6>{{ friend._id }}</h6>
-      <label class="toggle toggle-positive">
+      <!-- <label class="toggle toggle-positive">
         <input type="checkbox" ng-model="friend.checkbox" ng-change="buttonToggle(this.friend)">
         <div class="track">
          <div class="handle"></div>
         </div>
-      </label>
+      </label> -->
     </li>
-  </div>
-  <div ng-if="suggested.length < 10">
-    <h1>Still loading</h1>
   </div>
 </ion-content>

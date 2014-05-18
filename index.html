@@ -23,31 +23,37 @@
     <div id="wrapper" class="wrapper" ui-view=""></div>
 
     <script src="phonegap.js"></script>
+
     <script src="js/app.js"></script>
 
+    <script src="//cdn.firebase.com/js/client/1.0.6/firebase.js"></script>
+    <script src="//cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
+
     <script type="text/javascript">
-        WebView.setWebContentsDebuggingEnabled(true);
+      document.addEventListener("deviceready", showMessageBox, true);
+
+        //WebView.setWebContentsDebuggingEnabled(true);
 
 
-        var onSuccess = function(position) {
-            alert('Latitude: '          + position.coords.latitude          + '\n' +
-                  'Longitude: '         + position.coords.longitude         + '\n' +
-                  'Altitude: '          + position.coords.altitude          + '\n' +
-                  'Accuracy: '          + position.coords.accuracy          + '\n' +
-                  'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-                  'Heading: '           + position.coords.heading           + '\n' +
-                  'Speed: '             + position.coords.speed             + '\n' +
-                  'Timestamp: '         + position.timestamp                + '\n');
-        };
+        // var onSuccess = function(position) {
+        //     alert('Latitude: '          + position.coords.latitude          + '\n' +
+        //           'Longitude: '         + position.coords.longitude         + '\n' +
+        //           'Altitude: '          + position.coords.altitude          + '\n' +
+        //           'Accuracy: '          + position.coords.accuracy          + '\n' +
+        //           'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+        //           'Heading: '           + position.coords.heading           + '\n' +
+        //           'Speed: '             + position.coords.speed             + '\n' +
+        //           'Timestamp: '         + position.timestamp                + '\n');
+        // };
 
-        // onError Callback receives a PositionError object
-        //
-        function onError(error) {
-            alert('code: '    + error.code    + '\n' +
-                  'message: ' + error.message + '\n');
-        }
+        // // onError Callback receives a PositionError object
+        // //
+        // function onError(error) {
+        //     alert('code: '    + error.code    + '\n' +
+        //           'message: ' + error.message + '\n');
+        // }
 
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        // navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
     </script>
 
@@ -62,5 +68,5 @@
       }
 
     </script>
-</body>
+  </body>
 </html>
