@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.phonegap.comrades"
-        version   = "0.0.1">
+        version   = "0.0.2">
 
     <name>Comrades</name>
 
