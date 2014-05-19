@@ -4,5 +4,7 @@
 </ion-header-bar>
 <ion-content padding="true" scroll="false">
   <button class="button button-full button-positive icon-left ion-person" ng-click="showModal()">I'm available now!</button>
-  <div>{{friends}}</div>
+  <ul>
+  <li ng-repeat="friend in friends">{{friend}}</li>
+</ul>
 </ion-content>
