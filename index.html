@@ -30,6 +30,12 @@
 
       document.addEventListener("deviceready", function () {
         console.log('loaded');
+
+        var contactFields = ["*"];
+
+        navigator.contacts.find(contactFields, function(contacts){
+          console.log(contacts);
+        })
       });
 
     </script>
