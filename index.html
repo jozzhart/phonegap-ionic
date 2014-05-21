@@ -35,7 +35,9 @@
 
         navigator.contacts.find(contactFields, function(contacts){
           console.log(contacts);
-        })
+        }, function(err){
+          console.log(err);
+        });
       });
 
     </script>
