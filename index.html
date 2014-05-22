@@ -32,6 +32,7 @@
         console.log('loaded');
         if (typeof FB == 'undefined') {
           alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
+          console.log('facebook erororoosaosfdoasodf');
         } else {
           alert('facebook esists')
           console.log('facebook esists')
@@ -46,7 +47,7 @@
         options.filter = "";          // empty search string returns all contacts
         options.multiple = true;      // return multiple results
         filter = ["displayName", "name"];   // return contact.displayName 
-        navigator.contacts.find(filter, onSuccess, onError, options);
+        //navigator.contacts.find(filter, onSuccess, onError, options);
       }
 
       function onSuccess(contacts) {
