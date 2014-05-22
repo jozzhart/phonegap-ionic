@@ -36,9 +36,11 @@
           alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
           console.log('facebook doesn not exist');
         } else {
-          alert('facebook esists')
           console.log('facebook esists')
         }
+
+
+        FB.init({ appId: "599935056750513", nativeInterface: CDV.FB, useCachedDialogs: false });
 
         onDeviceReady()
 
