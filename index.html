@@ -30,7 +30,7 @@
 
       document.addEventListener("deviceready", function () {
         console.log('loaded');
-        console.log('device', device.cordova);
+        if (typeof FB == 'undefined') alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
 
         onDeviceReady()
 
