@@ -4,8 +4,11 @@
   </div>
   <div class="row responsive-sm">
     <div class="col">
-      <div class="content has-header padding">
+      <div class="content has-header padding" ng-if="!loggingIn">
         <a ng-click="login()" class="button button-block button-positive"><i class="fa fa-facebook-square fa-lg"></i> Login via Facebook</a>
+      </div>
+      <div class="content has-header padding" ng-if="loggingIn">
+        Logging In
       </div>
     </div>
   </div>
