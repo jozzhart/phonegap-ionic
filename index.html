@@ -55,11 +55,11 @@
       });
 
       function onDeviceReady() {
-        var options = new ContactFindOptions();
-        options.filter = "";          // empty search string returns all contacts
-        options.multiple = true;      // return multiple results
-        filter = ["displayName", "name"];   // return contact.displayName
-        navigator.contacts.find(filter, onSuccess, onError, options);
+        // var options = new ContactFindOptions();
+        // options.filter = "";          // empty search string returns all contacts
+        // options.multiple = true;      // return multiple results
+        // filter = ["displayName", "name"];   // return contact.displayName
+        // navigator.contacts.find(filter, onSuccess, onError, options);
       }
 
       function onSuccess(contacts) {
