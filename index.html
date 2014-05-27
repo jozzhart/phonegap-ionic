@@ -33,26 +33,21 @@
     <script type="text/javascript" charset="utf-8">
 
       document.addEventListener("deviceready", function () {
-        console.log('loaded');
         if (typeof FB == 'undefined') {
           alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
-          console.log('facebook doesn not exist');
-        } else {
-          console.log('facebook esists')
         }
 
         FB.init({ appId: "599935056750513", nativeInterface: CDV.FB, useCachedDialogs: false });
 
         onDeviceReady()
-
       });
 
       function onDeviceReady() {
-        // var options = new ContactFindOptions();
-        // options.filter = "";          // empty search string returns all contacts
-        // options.multiple = true;      // return multiple results
-        // filter = ["displayName", "name"];   // return contact.displayName
-        // navigator.contacts.find(filter, onSuccess, onError, options);
+        var options = new ContactFindOptions();
+        options.filter = "";          // empty search string returns all contacts
+        options.multiple = true;      // return multiple results
+        filter = ["displayName", "name"];   // return contact.displayName
+        navigator.contacts.find(filter, onSuccess, onError, options);
       }
 
       function onSuccess(contacts) {
