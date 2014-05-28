@@ -12,16 +12,16 @@ CDV.FB = {
     xmlhttp.onload=function(){console.log("Endpoint saved "+ this.responseText);}
     xmlhttp.open("POST", "https://www.facebook.com/impression.php", true);
     xmlhttp.send('plugin=featured_resources&payload={"resource": "adobe_phonegap", "appid": "'+apiKey+'", "version": "3.0.0" }');
-
+    
     cordova.exec(function() {
     var authResponse = JSON.parse(localStorage.getItem('cdv_fb_session') || '{"expiresIn":0}');
-    if (authResponse && authResponse.expirationTime) {
+    if (authResponse && authResponse.expirationTime) { 
       var nowTime = (new Date()).getTime();
-      if (authResponse.expirationTime > nowTime) {
+      if (authResponse.expirationTime > nowTime) { 
         // Update expires in information
         updatedExpiresIn = Math.floor((authResponse.expirationTime - nowTime) / 1000);
         authResponse.expiresIn = updatedExpiresIn;
-
+                 
         localStorage.setItem('cdv_fb_session', JSON.stringify(authResponse));
         FB.Auth.setAuthResponse(authResponse, 'connected');
        }
@@ -34,9 +34,9 @@ CDV.FB = {
     cordova.exec(function(e) { // login
         if (e.authResponse && e.authResponse.expiresIn) {
           var expirationTime = e.authResponse.expiresIn === 0
-          ? 0
+          ? 0 
           : (new Date()).getTime() + e.authResponse.expiresIn * 1000;
-          e.authResponse.expirationTime = expirationTime;
+          e.authResponse.expirationTime = expirationTime; 
         }
         localStorage.setItem('cdv_fb_session', JSON.stringify(e.authResponse));
         FB.Auth.setAuthResponse(e.authResponse, 'connected');
