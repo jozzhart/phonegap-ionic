@@ -5,15 +5,8 @@
 <ion-content padding="false" scroll="true">
   <div class="list">
     <li ng-repeat="contact in contacts" class="item item-thumbnail-left item-toggle">
-
       <h2>{{ contact.displayName }}</h2>
-      <h4>{{ contact.emails }}</h4>
-<!--       <label class="toggle toggle-positive">
-        <input type="checkbox" ng-model="contact.checkbox" ng-change="buttonToggle(this.contact)">
-        <div class="track">
-         <div class="handle"></div>
-        </div>
-      </label> -->
+      <h4 ng-repeat="email in contact.emails">{{ email.value }}</h4>
     </li>
   </div>
 </ion-content>
