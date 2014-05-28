@@ -49,6 +49,8 @@
     <!-- Plugins can also be added here. -->
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.contacts" />
+    <gap:plugin name="org.apache.cordova.console" version="0.2.7" />
+    <gap:plugin name="org.apache.cordova.geolocation" version="0.3.6" />
     <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.4.0">
         <param name="APP_ID" value="599935056750513" />
         <param name="APP_NAME" value="comrades" />
