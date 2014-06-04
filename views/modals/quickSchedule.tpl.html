@@ -6,28 +6,30 @@
     </div>
   </ion-header-bar>
   <ion-content>
-    <ion-pane ng-show="!activityView">
-      <div class="list">
-        <label class="item item-input item-stacked-label">
-          <span class="input-label">Event Type</span>
-          <button class="button button-small icon-right ion-close button-positive" ng-click="openActivityModal()">Anything</button>
-        </label>
-        <label class="item item-input item-stacked-label">
-          <span class="input-label">Invitees</span>
-          <input type="text" value="All local friends">
-        </label>
-        <label class="item item-input item-stacked-label">
-          <span class="input-label">Time</span>
-          <input type="text" placeholder="(optional)">
-        </label>
-        <label class="item item-input item-stacked-label">
-          <span class="input-label">Location</span>
-          <input type="text" placeholder="(optional)">
-        </label>
-        <label class="item item-input item-stacked-label">
-          <span class="input-label">Description</span>
-          <input type="text" placeholder="(optional)">
-        </label>
-      </div>
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Event Type</span>
+        <button class="button button-small icon-right ion-close button-positive" ng-click="openActivityModal()">Anything</button>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Invitees</span>
+        <button class="button button-small icon-right ion-close button-positive" ng-click="openActivityModal()">All near-by friends</button>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Time</span>
+        <input type="text" placeholder="Now">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Location</span>
+        <input type="text" placeholder="(optional)">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Description</span>
+        <input type="text" placeholder="(optional)">
+      </label>
+    </div>
   </ion-content>
+  <ion-footer-bar class="bar-balanced">
+    <button class="button button-full button-positive">Add custome tag</button>
+  </ion-footer-bar>
 </div>
