@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.phonegap.comrades"
-        version   = "0.0.4">
+        version   = "0.0.3">
 
     <name>Comrades</name>
 
@@ -26,8 +26,12 @@
         If you do not want any permissions to be added to your app, add the
         following tag to your config.xml; you will still have the INTERNET
         permission on your app, which PhoneGap requires.
-    -->
+
     <preference name="permissions"                value="none"/>
+    -->
+
+    <gap:platform name="ios" />
+    <gap:platform name="android" />
 
     <!-- Customize your app and platform with the preference element. -->
     <!-- <preference name="phonegap-version"      value="3.4.0" /> -->      <!-- all: current version of PhoneGap -->
@@ -49,9 +53,9 @@
     <!-- Plugins can also be added here. -->
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.contacts" />
-    <gap:plugin name="org.apache.cordova.console" version="0.2.7" />
-    <gap:plugin name="org.apache.cordova.geolocation" version="0.3.6" />
+    <gap:plugin name="org.apache.cordova.geolocation" version="0.3.7" />
     <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.4.0">
+        <param name="ios-package" value="FacebookConnectPlugin" />
         <param name="APP_ID" value="599935056750513" />
         <param name="APP_NAME" value="comrades" />
     </gap:plugin>
@@ -97,12 +101,7 @@
         Otherwise, you can specify specific domains:
     -->
     <access origin="http://127.0.0.1*"/> <!-- allow local pages -->
-    <access origin="*" subdomains="true" />
-    <access origin="https://m.facebook.com" subdomains="true"/>
-    <access origin="https://graph.facebook.com" subdomains="true"/>
-    <access origin="https://api.facebook.com" subdomains="true"/>
-    <access origin="https://*.fbcdn.net" subdomains="true"/>
-    <access origin="https://*.akamaihd.net" subdomains="true"/>
+    <access origin="*" />
     <!--
         <access origin="http://phonegap.com" />                    - allow any secure requests to http://phonegap.com/
         <access origin="http://phonegap.com" subdomains="true" />  - same as above, but including subdomains, such as http://build.phonegap.com/
