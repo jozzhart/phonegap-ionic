@@ -3,7 +3,7 @@
   <h1 class="title">{{title}}</h1>
 </ion-header-bar>
 <ion-content padding="false" scroll="true">
-  <div class="list">
+  <ul class="list">
     <li collection-repeat="friend in friends" class="item item-thumbnail-left item-toggle" collection-item-width="'100%'" collection-item-height="100" style="height: 100px; left:0; right:0;">
       <img ng-src="{{ friend.picture }}">
       <h2>{{ friend.displayName }}</h2>
@@ -15,5 +15,5 @@
         </div>
       </label>
     </li>
-  </div>
+  </ul>
 </ion-content>

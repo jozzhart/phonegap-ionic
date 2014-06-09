@@ -8,40 +8,39 @@
   <ion-content>
     <button class="button button-full button-positive">Add custome tag</button>
     <ul class="list">
-
       <li class="item item-icon-left item-toggle">
         <i class="icon ion-beer"></i>
         Drinks
         <label class="toggle toggle-positive">
-          <input type="checkbox">
+          <input type="checkbox" ng-click="tagToggle($event, 'drinks')">
           <div class="track">
            <div class="handle"></div>
           </div>
         </label>
       </li>
-
       <li class="item item-icon-left item-toggle">
         <i class="icon ion-coffee"></i>
         Coffee
         <label class="toggle toggle-positive">
-          <input type="checkbox">
+          <input type="checkbox" ng-click="tagToggle($event, 'coffee')">
           <div class="track">
            <div class="handle"></div>
           </div>
         </label>
       </li>
-
       <li class="item item-icon-left item-toggle">
         <i class="icon ion-pizza"></i>
         Food
         <label class="toggle toggle-positive">
-          <input type="checkbox">
+          <input type="checkbox" ng-click="tagToggle($event, 'food')">
           <div class="track">
            <div class="handle"></div>
           </div>
         </label>
       </li>
-
     </ul>
+    <div class="padding">
+      <button class="button button-full button-positive" ng-click="modals.modalActivity.hide()">Save</button>
+    </div>
   </ion-content>
 </div>

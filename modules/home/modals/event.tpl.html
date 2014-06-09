@@ -9,7 +9,9 @@
     <div class="list">
       <label class="item item-input item-stacked-label">
         <span class="input-label">Event Type</span>
-        <button class="button button-small icon-right ion-close button-positive" ng-click="modals.modalActivity.show()">Anything</button>
+        <div ng-repeat="tag in newEvent.tags">
+          <button class="button button-small icon-right ion-close button-positive" ng-click="modals.modalActivity.show()">{{tag}}</button>
+        </div>
       </label>
       <label class="item item-input item-stacked-label">
         <span class="input-label">Invitees</span>
@@ -19,21 +21,21 @@
         <span class="input-label">Time</span>
         <span ng-if="!specifyTime">Now</span>
         <span ng-if="specifyTime">
-          <input type="text" placeholder="hh" style="border:1px solid red">
-          <input type="text" placeholder="mm" style="border:1px solid red">
+          <input ng-model="newEvent.time.hh" type="number" placeholder="hh" style="border:1px solid grey; width:80px; float:left">
+          <input ng-model="newEvent.time.mm" type="number" placeholder="mm" style="border:1px solid grey; width:80px; float:left">
         </span>
       </label>
       <label class="item item-input item-stacked-label">
         <span class="input-label">Location</span>
-        <input type="text" placeholder="(optional)">
+        <input type="text" placeholder="(optional)" ng-model="newEvent.location">
       </label>
       <label class="item item-input item-stacked-label">
         <span class="input-label">Description</span>
-        <input type="text" placeholder="(optional)">
+        <input type="text" placeholder="(optional)" ng-model="newEvent.description">
       </label>
     </div>
     <div class="padding">
-      <button class="button button-full button-positive">Create Event</button>
+      <button class="button button-full button-positive" ng-click="createEvent()">Create Event</button>
     </div>
   </ion-content>
 </div>
