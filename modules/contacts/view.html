@@ -4,7 +4,7 @@
 </ion-header-bar>
 <ion-content padding="false" scroll="true">
   <div class="list">
-    <li ng-repeat="contact in contacts" class="item item-thumbnail-left item-toggle">
+    <li collection-repeat="contact in contacts" class="item item-thumbnail-left item-toggle" collection-item-width="'100%'" collection-item-height="100" style="height: 100px; left:0; right:0;">
       <h2>{{ contact.displayName }}</h2>
       <h4 ng-repeat="email in contact.emails">{{ email.value }}</h4>
     </li>

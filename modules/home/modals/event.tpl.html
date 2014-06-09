@@ -1,0 +1,39 @@
+<div class="modal">
+  <ion-header-bar>
+    <h1 class="title">Create New Event</h1>
+    <div class="buttons">
+      <button class="button button-icon ion-close" ng-click="modals.modalEvent.hide()"></button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Event Type</span>
+        <button class="button button-small icon-right ion-close button-positive" ng-click="modals.modalActivity.show()">Anything</button>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Invitees</span>
+        <button class="button button-small icon-right ion-close button-positive" ng-click="modals.modalFriends.show()">All near-by friends</button>
+      </label>
+      <label class="item item-input item-stacked-label" ng-click="addTime()">
+        <span class="input-label">Time</span>
+        <span ng-if="!specifyTime">Now</span>
+        <span ng-if="specifyTime">
+          <input type="text" placeholder="hh" style="border:1px solid red">
+          <input type="text" placeholder="mm" style="border:1px solid red">
+        </span>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Location</span>
+        <input type="text" placeholder="(optional)">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Description</span>
+        <input type="text" placeholder="(optional)">
+      </label>
+    </div>
+    <div class="padding">
+      <button class="button button-full button-positive">Create Event</button>
+    </div>
+  </ion-content>
+</div>
