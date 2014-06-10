@@ -6,14 +6,8 @@
   <div class="list">
     <li ng-repeat="friend in comrades" class="item item-thumbnail-left item-toggle">
       <img ng-src="{{ friend.picture }}">
-      <h2>{{ friend.name }}</h2>
+      <h2>{{ friend.displayName }}</h2>
       <h4>{{ friend.email }}</h4>
-      <!-- <label class="toggle toggle-positive">
-        <input type="checkbox" ng-model="friend.checkbox" ng-change="buttonToggle(this.friend)">
-        <div class="track">
-         <div class="handle"></div>
-        </div>
-      </label> -->
     </li>
   </div>
 </ion-content>
