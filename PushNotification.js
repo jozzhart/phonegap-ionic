@@ -1,5 +1,7 @@
 
 var PushNotification = function() {
+
+	console.log('loading pushNotification');
 };
 
 
@@ -36,8 +38,8 @@ var PushNotification = function() {
 
 		cordova.exec(successCallback, errorCallback, "PushPlugin", "unregister", []);
     };
- 
- 
+
+
     // Call this to set the application icon badge
     PushNotification.prototype.setApplicationIconBadgeNumber = function(successCallback, badge) {
 		if (errorCallback == null) { errorCallback = function() {}}
