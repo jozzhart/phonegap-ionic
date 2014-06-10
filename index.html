@@ -107,11 +107,11 @@
         if ( device.platform == 'android' || device.platform == 'Android' )
         {
             pushNotification.register(
-                successHandler,
-                errorHandler, {
-                    "senderID":"633864311576",
-                    "ecb":"onNotificationGCM"
-                });
+              successHandler,
+              errorHandler, {
+                  "senderID":"633864311576",
+                  "ecb":"onNotificationGCM"
+              });
         }
 
         onDeviceReady()
