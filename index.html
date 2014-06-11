@@ -33,9 +33,8 @@
 
     <script type="text/javascript" charset="utf-8">
 
-    var me = this;
-
-      var pushNotification;
+      // var me = this;
+      // var pushNotification;
 
       document.addEventListener("deviceready", function () {
         if (typeof FB == 'undefined') {
@@ -43,71 +42,71 @@
         }
         FB.init({ appId: "599935056750513", nativeInterface: CDV.FB, useCachedDialogs: false });
 
-        pushNotification = window.plugins.pushNotification;
+      //   pushNotification = window.plugins.pushNotification;
 
 
-        var errorHandler = function(error) {
-            alert('error = ' + error);
-        }
+      //   var errorHandler = function(error) {
+      //       alert('error = ' + error);
+      //   }
 
-        var successHandler = function(result) {
-            alert('result = ' + result);
-        }
+      //   var successHandler = function(result) {
+      //       alert('result = ' + result);
+      //   }
 
-        var tokenHandler =function (result) {
-            // Your iOS push server needs to know the token before it can push to this device
-            // here is where you might want to send it the token for later use.
-            alert('device token = ' + result);
-        }
+      //   var tokenHandler =function (result) {
+      //       // Your iOS push server needs to know the token before it can push to this device
+      //       // here is where you might want to send it the token for later use.
+      //       alert('device token = ' + result);
+      //   }
 
-        var onNotificationAPN =function(e) {
-          alert(e);
-        }
+      //   var onNotificationAPN =function(e) {
+      //     alert(e);
+      //   }
 
-        me.onNotificationGCM =function(e) {
-        switch( e.event )
-        {
-            case 'registered':
-                if ( e.regid.length > 0 )
-                {
-                    console.log("Regid " + e.regid);
-                    alert('registration id = '+e.regid);
-                }
-            break;
+      //   me.onNotificationGCM =function(e) {
+      //   switch( e.event )
+      //   {
+      //       case 'registered':
+      //           if ( e.regid.length > 0 )
+      //           {
+      //               console.log("Regid " + e.regid);
+      //               alert('registration id = '+e.regid);
+      //           }
+      //       break;
 
-            case 'message':
-              // this is the actual push notification. its format depends on the data model from the push server
-              alert('message = '+e.message+' msgcnt = '+e.msgcnt);
-            break;
+      //       case 'message':
+      //         // this is the actual push notification. its format depends on the data model from the push server
+      //         alert('message = '+e.message+' msgcnt = '+e.msgcnt);
+      //       break;
 
-            case 'error':
-              alert('GCM error = '+e.msg);
-            break;
+      //       case 'error':
+      //         alert('GCM error = '+e.msg);
+      //       break;
 
-            default:
-              alert('An unknown GCM event has occurred');
-              break;
-        }
-      }
+      //       default:
+      //         alert('An unknown GCM event has occurred');
+      //         break;
+      //   }
+      // }
 
-        if ( device.platform == 'android' || device.platform == 'Android' )
-        {
-            pushNotification.register(
-              successHandler,
-              errorHandler, {
-                  "senderID":"633864311576",
-                  "ecb":"onNotificationGCM"
-              });
-        } else {
-          pushNotification.register(
-          tokenHandler,
-          errorHandler, {
-              "badge":"true",
-              "sound":"true",
-              "alert":"true",
-              "ecb":"onNotificationAPN"
-          });
-        }
+      //   if ( device.platform == 'android' || device.platform == 'Android' )
+      //   {
+      //       pushNotification.register(
+      //         successHandler,
+      //         errorHandler, {
+      //             "senderID":"633864311576",
+      //             "ecb":"onNotificationGCM"
+      //         });
+      //   } else {
+      //     pushNotification.register(
+      //     tokenHandler,
+      //     errorHandler, {
+      //         "badge":"true",
+      //         "sound":"true",
+      //         "alert":"true",
+      //         "ecb":"onNotificationAPN"
+      //     });
+      //   }
 
         onDeviceReady()
       });
