@@ -27,7 +27,9 @@
       </label>
       <label class="item item-input item-stacked-label">
         <span class="input-label">Location</span>
-        <input type="text" placeholder="(optional)" ng-model="newEvent.location">
+        <span class="input-label">{{newEvent.location.name}}</span>
+        <button class="button button-positive button-small" ng-click="modals.modalLocations.show()" ng-hide="newEvent.location">Choose Location</button>
+
       </label>
       <label class="item item-input item-stacked-label">
         <span class="input-label">Description</span>

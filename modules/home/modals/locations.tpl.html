@@ -1,0 +1,19 @@
+<div class="modal">
+  <ion-header-bar>
+    <h1 class="title">Choose Location</h1>
+    <div class="buttons">
+      <button class="button button-icon ion-close" ng-click="modals.modalLocations.hide()"></button>
+    </div>
+  </ion-header-bar>
+  <ion-content padding="false" scroll="true">
+    <ul class="list" style="height:300px;">
+      <li ng-repeat="location in locations" class="item item-thumbnail-left item-toggle">
+        <img ng-src="{{ location.picture }}">
+        <a ng-click="setLocation(location)">{{ location.name }}</a>
+      </li>
+    </ul>
+    <div class="padding">
+      <button class="button button-full button-positive" ng-click="modals.modalLocations.hide()">Save</button>
+    </div>
+  </ion-content>
+</div>
