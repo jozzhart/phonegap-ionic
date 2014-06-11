@@ -17,7 +17,7 @@
       <script src="http://maps.googleapis.com/maps/api/js?libraries=weather,visualization,places&sensor=true&language=en&v=3.14"></script>
 
   </head>
-  <body class="" ng-app="app">
+  <body class="">
 
     <!-- Add your site or application content here -->
     <div id="wrapper" class="wrapper" ui-view=""></div>
@@ -25,7 +25,7 @@
     <script src="cordova.js"></script>
     <script src="cdv-plugin-fb-connect.js"></script>
     <script src="facebook-js-sdk.js"></script>
-    <script type="text/javascript" src="PushNotification.js"></script>
+    <script src="PushNotification.js"></script>
 
     <script src="js/app.js"></script>
 
@@ -109,20 +109,16 @@
           });
         }
 
-
-
-
         onDeviceReady()
       });
 
       function onDeviceReady() {
+
+        angular.bootstrap(document, ['app']);
+
         console.log('app loaded');
       }
 
-      // onError: Failed to get the contacts
-      function onError(contactError) {
-        alert('onError!');
-      }
 
     </script>
   </body>
