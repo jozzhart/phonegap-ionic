@@ -17,7 +17,7 @@
       <script src="http://maps.googleapis.com/maps/api/js?libraries=weather,visualization,places&sensor=true&language=en&v=3.14"></script>
 
   </head>
-  <body class="">
+  <body class="" ng-app="app">
 
     <!-- Add your site or application content here -->
     <div id="wrapper" class="wrapper" ui-view=""></div>
@@ -29,8 +29,6 @@
 
     <script src="js/app.js"></script>
 
-
-
     <script type="text/javascript" charset="utf-8">
 
       // var me = this;
@@ -41,80 +39,7 @@
           alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
         }
         FB.init({ appId: "599935056750513", nativeInterface: CDV.FB, useCachedDialogs: false });
-
-      //   pushNotification = window.plugins.pushNotification;
-
-
-      //   var errorHandler = function(error) {
-      //       alert('error = ' + error);
-      //   }
-
-      //   var successHandler = function(result) {
-      //       alert('result = ' + result);
-      //   }
-
-      //   var tokenHandler =function (result) {
-      //       // Your iOS push server needs to know the token before it can push to this device
-      //       // here is where you might want to send it the token for later use.
-      //       alert('device token = ' + result);
-      //   }
-
-      //   var onNotificationAPN =function(e) {
-      //     alert(e);
-      //   }
-
-      //   me.onNotificationGCM =function(e) {
-      //   switch( e.event )
-      //   {
-      //       case 'registered':
-      //           if ( e.regid.length > 0 )
-      //           {
-      //               console.log("Regid " + e.regid);
-      //               alert('registration id = '+e.regid);
-      //           }
-      //       break;
-
-      //       case 'message':
-      //         // this is the actual push notification. its format depends on the data model from the push server
-      //         alert('message = '+e.message+' msgcnt = '+e.msgcnt);
-      //       break;
-
-      //       case 'error':
-      //         alert('GCM error = '+e.msg);
-      //       break;
-
-      //       default:
-      //         alert('An unknown GCM event has occurred');
-      //         break;
-      //   }
-      // }
-
-      //   if ( device.platform == 'android' || device.platform == 'Android' )
-      //   {
-      //       pushNotification.register(
-      //         successHandler,
-      //         errorHandler, {
-      //             "senderID":"633864311576",
-      //             "ecb":"onNotificationGCM"
-      //         });
-      //   } else {
-      //     pushNotification.register(
-      //     tokenHandler,
-      //     errorHandler, {
-      //         "badge":"true",
-      //         "sound":"true",
-      //         "alert":"true",
-      //         "ecb":"onNotificationAPN"
-      //     });
-      //   }
-
-        onDeviceReady()
       });
-
-      function onDeviceReady() {
-        angular.bootstrap(document, ['app']);
-        console.log('app loaded');
-      }
 
     </script>
   </body>
