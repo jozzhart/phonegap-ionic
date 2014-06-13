@@ -3,5 +3,10 @@
   <h1 class="title">Events</h1>
 </ion-header-bar>
 <ion-content padding="false" scroll="true">
-  <h1>Events</h1>
+  <ul class="list">
+    <li ng-repeat="event in events" class="item item-thumbnail-left item-toggle">
+      <img ng-src="{{ event.picture }}">
+      <h2>{{ event.owner }}</h2>
+    </li>
+  </ul>
 </ion-content>

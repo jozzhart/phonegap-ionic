@@ -17,7 +17,7 @@
       <script src="http://maps.googleapis.com/maps/api/js?libraries=weather,visualization,places&sensor=true&language=en&v=3.14"></script>
 
   </head>
-  <body class="" ng-app="app">
+  <body class="">
 
     <!-- Add your site or application content here -->
     <div id="wrapper" class="wrapper" ui-view=""></div>
@@ -39,6 +39,19 @@
           alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
         }
         FB.init({ appId: "599935056750513", nativeInterface: CDV.FB, useCachedDialogs: false });
+
+
+        deferredBootstrapper.bootstrap({
+          element: document.body,
+          module: 'app',
+          resolve: {
+            APP_CONFIG: ['$http', function ($http) {
+              return $http.get('/api/demo-config');
+            }]
+          }
+        });
+
+
       });
 
     </script>
