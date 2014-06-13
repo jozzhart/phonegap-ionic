@@ -31,27 +31,11 @@
 
     <script type="text/javascript" charset="utf-8">
 
-      // var me = this;
-      // var pushNotification;
-
       document.addEventListener("deviceready", function () {
         if (typeof FB == 'undefined') {
           alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
         }
         FB.init({ appId: "599935056750513", nativeInterface: CDV.FB, useCachedDialogs: false });
-
-
-        deferredBootstrapper.bootstrap({
-          element: document.body,
-          module: 'app',
-          resolve: {
-            APP_CONFIG: ['$http', function ($http) {
-              return $http.get('/api/demo-config');
-            }]
-          }
-        });
-
-
       });
 
     </script>
