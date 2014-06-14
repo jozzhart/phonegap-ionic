@@ -54,6 +54,7 @@
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.contacts" />
     <gap:plugin name="org.apache.cordova.geolocation" version="0.3.7" />
+    <gap:plugin name="de.appplant.cordova.plugin.background-mode" version="0.5.0" />
     <gap:plugin name="com.phonegap.plugins.pushplugin" />
     <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.4.0">
         <param name="ios-package" value="FacebookConnectPlugin" />
