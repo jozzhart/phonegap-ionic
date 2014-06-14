@@ -1,9 +1,8 @@
 <div class="modal">
   <ion-header-bar>
+  <button class="button button-icon ion-plus button-clear" ng-click="modals.modalAddLocation.show()"> Add Location</button>
     <h1 class="title">Choose Location</h1>
-    <div class="buttons">
-      <button class="button button-icon ion-close" ng-click="modals.modalLocations.hide()"></button>
-    </div>
+    <button class="button button-icon ion-close button-clear" ng-click="modals.modalLocations.hide()"></button>
   </ion-header-bar>
   <ion-content padding="false" scroll="true">
     <ul class="list" style="height:300px;">

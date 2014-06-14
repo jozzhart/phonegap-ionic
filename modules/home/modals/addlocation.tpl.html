@@ -1,0 +1,10 @@
+<div class="modal">
+  <ion-header-bar title="My Modal Title">
+    <input type="text" id="Autocomplete" class="form-control" ng-autocomplete ng-model="inputLocation" details="modals.modalAddLocation.newLocation" options="locationAutocomplete"/>
+    <button class="button" ng-click="addLocation()">Add Locations</button>
+  </ion-header-bar>
+  <ion-content padding="false" scroll="false">
+    <google-map center='map.center' control="map.control" zoom='map.zoom'>
+    </google-map>
+  </ion-content>
+</div>

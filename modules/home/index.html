@@ -2,8 +2,14 @@
   <button class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()"></button>
   <h1 class="title">{{user.displayName}}</h1>
   <button class="button" ng-click="logout()">Logout</button>
-
 </ion-header-bar>
 <ion-content padding="true" scroll="false">
   <button class="button button-full button-positive icon-left ion-person" ng-click="modals.modalEvent.show()">I'm available now!</button>
+  <br /><br /><br />
+  <h4>My SnapMeets</h4>
+  <ul class="list">
+    <li ng-repeat="event in events" class="item item-thumbnail-left item-toggle">
+      <h2>{{ event.owner }}</h2>
+    </li>
+  </ul>
 </ion-content>
