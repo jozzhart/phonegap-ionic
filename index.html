@@ -32,14 +32,12 @@
     <script type="text/javascript" charset="utf-8">
 
       document.addEventListener("deviceready", function () {
-        console.log('device ready with ng-app');
-
         if (typeof FB == 'undefined') {
           alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
         }
         FB.init({ appId: "599935056750513", nativeInterface: CDV.FB, useCachedDialogs: false });
 
-        //window.plugin.backgroundMode.enable();
+        window.plugin.backgroundMode.enable();
       });
 
     </script>
