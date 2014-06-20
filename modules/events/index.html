@@ -2,11 +2,11 @@
   <button class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()"></button>
   <h1 class="title">Events</h1>
 </ion-header-bar>
-<ion-content padding="false" scroll="true">
-  <ul class="list">
-    <li ng-repeat="event in events" class="item item-thumbnail-left item-toggle">
-      <img ng-src="{{ event.picture }}">
-      <h2>{{ event.owner }}</h2>
-    </li>
-  </ul>
+<ion-content padding="false" scroll="false">
+  <div class="list">
+    <a href="#/event/{{event.uid}}" ng-repeat="event in events" class="item">
+      <img ng-src="{{ event.owner.picture }}">
+      <h2>{{ event.owner.displayName }}</h2>
+    </a>
+  </div>
 </ion-content>
