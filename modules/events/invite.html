@@ -1,0 +1,33 @@
+<ion-header-bar class="bar-positive">
+  <button class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()"></button>
+  <h1 class="title">Event Name</h1>
+</ion-header-bar>
+<ion-content padding="false" scroll="true">
+
+  <h1></h1>
+  <h2></h2>
+
+  <div class="list card">
+    <div class="item item-avatar">
+      <img src="{{event.owner.picture}}" width="30" height="30" />
+      <h2>{{event.owner.displayName}}</h2>
+      <p>xxxxxxxxxxx</p>
+    </div>
+
+    <div class="item item-body">
+      <p>
+        YOu ahve been invited for a snapmeet
+      </p>
+      <p>
+        {{event.description}}
+      </p>
+    </div>
+
+    <div class="item">
+      <button class="button button-small button-balanced">Hell Yeah!</button>
+      <button class="button button-small button-calm">Not Today</button>
+      <button class="button button-small button-assertive">Never with this loser</button>
+    </div>
+
+  </div>
+</ion-content>

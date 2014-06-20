@@ -3,5 +3,7 @@
   <h1 class="title">Event Name</h1>
 </ion-header-bar>
 <ion-content padding="false" scroll="true">
-  <h1>Event details {{event.owner}} {{event.description}}</h1>
+  <img src="{{event.owner.picture}}" />
+  <h1>{{event.owner.displayName}}</h1>
+  <h2>{{event.description}}</h2>
 </ion-content>
