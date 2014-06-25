@@ -4,14 +4,12 @@
 </ion-header-bar>
 <ion-content padding="false" scroll="true">
 
-  <h1></h1>
-  <h2></h2>
-
   <div class="list card">
     <div class="item item-avatar">
       <img src="{{event.owner.picture}}" width="30" height="30" />
       <h2>{{event.owner.displayName}}</h2>
-      <p>xxxxxxxxxxx</p>
+      <p ng-if="event.time">{{event.time}}</p>
+      <p ng-if="!event.time">Now</p>
     </div>
 
     <div class="item item-body">
@@ -23,10 +21,22 @@
       </p>
     </div>
 
+    <div class="item item-body">
+      <p>
+        Other invitees
+      </p>
+      <ul>
+        <li ng-repeat="invitee in event.invitees">
+          <img src="{{invitee.picture}}" />
+          {{invitee.displayName}}
+        </li>
+      </ul>
+    </div>
+
     <div class="item">
-      <button class="button button-small button-balanced">Hell Yeah!</button>
-      <button class="button button-small button-calm">Not Today</button>
-      <button class="button button-small button-assertive">Never with this loser</button>
+      <button class="button button-small button-balanced" ng-click="eventAccept(event)">Hell Yeah!</button>
+      <button class="button button-small button-calm" ng-click="eventReject(event)">Not Today</button>
+      <button class="button button-small button-assertive" ng-click="blockEvents(event)">Never with this loser</button>
     </div>
 
   </div>
