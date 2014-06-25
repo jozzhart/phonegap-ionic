@@ -4,6 +4,18 @@
 </ion-header-bar>
 <ion-content padding="false" scroll="false">
   <div class="list">
+    <div class="item item-divider">
+      I've been invited to
+    </div>
+    <a href="#/event/{{invite.uid}}" ng-repeat="invite in invites" class="item">
+      <img ng-src="{{ invite.owner.picture }}">
+      <h2>{{ invite.owner.displayName }}</h2>
+    </a>
+  </div>
+  <div class="list">
+    <div class="item item-divider">
+      My events
+    </div>
     <a href="#/event/{{event.uid}}" ng-repeat="event in events" class="item">
       <img ng-src="{{ event.owner.picture }}">
       <h2>{{ event.owner.displayName }}</h2>
