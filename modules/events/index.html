@@ -7,7 +7,7 @@
     <div class="item item-divider">
       I've been invited to
     </div>
-    <a href="#/event/{{invite.uid}}" ng-repeat="invite in invites" class="item">
+    <a href="#/event-invite/{{invite.uid}}" ng-repeat="invite in invites" class="item">
       <img ng-src="{{ invite.owner.picture }}">
       <h2>{{ invite.owner.displayName }}</h2>
     </a>
