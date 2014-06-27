@@ -6,7 +6,7 @@
   </ion-header-bar>
   <ion-content padding="false" scroll="true">
     <ul class="list" style="height:300px;">
-      <li ng-repeat="location in $store.user.locations" class="item item-thumbnail-left item-toggle">
+      <li ng-repeat="location in locations" class="item item-thumbnail-left item-toggle">
         <img ng-src="{{ location.picture }}">
         <a ng-click="setLocation(location)">{{ location.name }}</a>
       </li>
