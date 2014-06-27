@@ -61,7 +61,7 @@
         <param name="APP_ID" value="599935056750513" />
         <param name="APP_NAME" value="comrades" />
     </gap:plugin>
-    <gap:plugin name="com.phonegap.plugin.statusbar" />
+    <gap:plugin name="com.phonegap.plugin.statusbar" version="1.0.1"/>
 
     <!--
         <gap:plugin name="Example" />
