@@ -61,6 +61,7 @@
         <param name="APP_ID" value="599935056750513" />
         <param name="APP_NAME" value="comrades" />
     </gap:plugin>
+
     <!--
         <gap:plugin name="Example" />
         A list of available plugins are available at https://build.phonegap.com/docs/plugins
@@ -94,6 +95,9 @@
     <gap:splash src="res/screen/ios/screen-ipad-landscape.png"     gap:platform="ios"     width="1024" height="768" />
     <gap:splash src="res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone" />
 
+    <gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance" overwrite="true">
+        <false/>
+    </gap:config-file>
     <!--
         Define access to external domains.
 
