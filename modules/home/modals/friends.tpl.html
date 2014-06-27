@@ -7,7 +7,7 @@
   </ion-header-bar>
   <ion-content padding="false" scroll="true">
     <ul class="list" style="height:300px;">
-      <li ng-repeat="friend in $store.user.friends" class="item item-thumbnail-left item-toggle">
+      <li ng-repeat="friend in friends" class="item item-thumbnail-left item-toggle">
         <img ng-src="{{ friend.picture }}">
         <h2>{{ friend.displayName }}</h2>
         <h4>{{ friend.email }}</h4>
