@@ -7,20 +7,19 @@
     <div class="item item-avatar">
       <img src="{{event.owner.picture}}" width="30" height="30" />
       <h2>{{event.owner.displayName}}</h2>
-      <p>summary here?</p>
     </div>
-
     <div class="item item-body">
       <p>
         Details of event
       </p>
       <p>
+        <span ng-repeat="tag in event.tags">{{tag}} </span>
         {{event.description}}
       </p>
     </div>
-
     <div class="item item-body">
-      <p ng-repeat="invitee in event.invitees">
+      <h2>Invitees</h2>
+      <p ng-repeat="invitee in event.invitees" class="item item-thumbnail-left">
         <img ng-src="{{ invitee.picture }}">
         {{invitee.displayName}}
       </p>

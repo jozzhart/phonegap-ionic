@@ -7,8 +7,8 @@
     <div class="item item-divider">
       I've been invited to
     </div>
-    <a href="#/event-invite/{{invite.uid}}" ng-repeat="invite in $store.invites" class="item">
-      <img ng-src="{{ invite.owner.picture }}" style="max-height : 40px;" />
+    <a href="#/event-invite/{{invite.uid}}" ng-repeat="invite in $store.invites" class="item item-thumbnail-left">
+      <img ng-src="{{ invite.owner.picture }}" />
       <h2>{{ invite.owner.displayName }}</h2>
     </a>
   </div>
@@ -16,8 +16,8 @@
     <div class="item item-divider">
       My events
     </div>
-    <a href="#/event/{{event.uid}}" ng-repeat="event in events" class="item">
-      <img ng-src="{{ event.owner.picture }}" style="max-height : 40px;" />
+    <a href="#/event/{{event.uid}}" ng-repeat="event in events" class="item item-thumbnail-left">
+      <img ng-src="{{ event.owner.picture }}" />
       <h2>{{ event.owner.displayName }}</h2>
     </a>
   </div>

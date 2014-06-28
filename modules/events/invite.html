@@ -14,7 +14,7 @@
 
     <div class="item item-body">
       <p>
-        YOu ahve been invited for a snapmeet
+        You have been invited for a snapmeet
       </p>
       <p>
         {{event.description}}
@@ -26,7 +26,7 @@
         Other invitees
       </p>
       <ul>
-        <li ng-repeat="invitee in event.invitees">
+        <li ng-repeat="invitee in event.invitees" class="item item-thumbnail-left">
           <img src="{{invitee.picture}}" />
           {{invitee.displayName}}
         </li>
