@@ -9,10 +9,14 @@
   <button class="button button-full button-positive icon-left ion-person" ng-click="modals.modalEvent.show()">I'm available now!</button>
   <br /><br />
   <h4>My SnapMeets</h4>
-  <ul class="messages">
-    <li ng-repeat="event in user.events" class="item-thumbnail-left">
+  <div class="messages">
+    <a ng-repeat="event in user.events" href="#/event/{{event.uid}}" class="item-thumbnail-left">
       <img ng-src="{{ event.owner.picture }}">
-      <p>{{ event.owner.displayName }} {{event.type}}</p>
-    </li>
-  </ul>
+      <p>{{ event.owner.displayName }}
+
+        Is interested in <span ng-repeat="tag in event.tags">{{tag}} </span> <span ng-if="event.time">at {{event.time.hh}}:{{event.time.mm}}</span>
+
+      </p>
+    </a>
+  </div>
 </ion-content>

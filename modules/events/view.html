@@ -7,16 +7,24 @@
     <div class="item item-avatar">
       <img src="{{event.owner.picture}}" width="30" height="30" />
       <h2>{{event.owner.displayName}}</h2>
-      <p>xxxxxxxxxxx</p>
+      <p>summary here?</p>
     </div>
 
     <div class="item item-body">
       <p>
-        YOu ahve been invited for a snapmeet
+        Details of event
       </p>
       <p>
         {{event.description}}
       </p>
     </div>
+
+    <div class="item item-body">
+      <p ng-repeat="invitee in event.invitees">
+        <img ng-src="{{ invitee.picture }}">
+        {{invitee.displayName}}
+      </p>
+    </div>
+
   </div>
 </ion-content>

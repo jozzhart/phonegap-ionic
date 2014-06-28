@@ -8,7 +8,7 @@
       I've been invited to
     </div>
     <a href="#/event-invite/{{invite.uid}}" ng-repeat="invite in $store.invites" class="item">
-      <img ng-src="{{ invite.owner.picture }}">
+      <img ng-src="{{ invite.owner.picture }}" style="max-height : 40px;" />
       <h2>{{ invite.owner.displayName }}</h2>
     </a>
   </div>
@@ -17,7 +17,7 @@
       My events
     </div>
     <a href="#/event/{{event.uid}}" ng-repeat="event in events" class="item">
-      <img ng-src="{{ event.owner.picture }}">
+      <img ng-src="{{ event.owner.picture }}" style="max-height : 40px;" />
       <h2>{{ event.owner.displayName }}</h2>
     </a>
   </div>
