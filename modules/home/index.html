@@ -12,7 +12,7 @@
   <ul class="messages">
     <li ng-repeat="event in user.events" class="item-thumbnail-left">
       <img ng-src="{{ event.owner.picture }}">
-      <p>{{ event.owner.displayName }}</p>
+      <p>{{ event.owner.displayName }} {{event.type}}</p>
     </li>
   </ul>
 </ion-content>
