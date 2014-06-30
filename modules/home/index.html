@@ -11,7 +11,7 @@
     My SnapMeets
   </div>
   <div class="messages">
-    <a ng-repeat="event in myEvents" href="#/event/{{event.uid}}" class="item-thumbnail-left">
+    <a ng-repeat="event in myEvents" href="{{event.url}}" class="item-thumbnail-left">
       <img ng-src="{{ event.owner.picture }}">
       <p>
         <span ng-if="event.myEvent">You created </span>
@@ -20,6 +20,7 @@
 
         <span ng-if="event.status === 'pending'" class="badge badge-energized pull-right">{{event.status}}</span>
         <span ng-if="event.status === 'accepted'" class="badge badge-balanced pull-right">{{event.status}}</span>
+        <span ng-if="event.status === 'rejected'" class="badge badge-assertive pull-right">{{event.status}}</span>
 
       </p>
     </a>

@@ -2,10 +2,19 @@
   <button class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()"></button>
   <h1 class="title">Event Invite</h1>
 </ion-header-bar>
-<ion-content padding="false" scroll="true">
-<p>{{message}}</p>
-  <div class="bar bar-footer">
-
-  <textarea placeholder="Type in here..." ng-keypress="sendMessage($event)" ></textarea>
+<ion-content class="chat-content" padding="false" scroll="true">
+  <div class="list card chat-list">
+    <div class="card chat-item" ng-repeat="message in messages">
+      <div class="item item-divider">
+        <img ng-src="{{message.user.picture}}">
+        <span>{{message.user.displayName}}: </span>
+      </div>
+      <div class="item item-text-wrap">
+        <p>{{message.text}}</p>
+      </div>
+    </div>
   </div>
 </ion-content>
+<div class="bar bar-footer">
+  <textarea placeholder="Type in here..." ng-keypress="sendMessage($event)" ></textarea>
+</div>
