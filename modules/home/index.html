@@ -16,7 +16,11 @@
       <p>
         <span ng-if="event.myEvent">You created </span>
         <span ng-if="!event.myEvent">{{ event.owner.displayName }} Is interested in </span>
-        <span ng-repeat="tag in event.tags">{{tag}} </span> <span ng-if="event.time">at {{event.time.hh}}:{{event.time.mm}}</span> {{event.status}}
+        <span ng-repeat="tag in event.tags">{{tag}} </span> <span ng-if="event.time">at {{event.time.hh}}:{{event.time.mm}}</span>
+
+        <span ng-if="event.status === 'pending'" class="badge badge-energized pull-right">{{event.status}}</span>
+        <span ng-if="event.status === 'accepted'" class="badge badge-balanced pull-right">{{event.status}}</span>
+
       </p>
     </a>
   </div>
