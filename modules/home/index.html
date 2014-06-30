@@ -13,8 +13,10 @@
   <div class="messages">
     <a ng-repeat="event in myEvents" href="#/event/{{event.uid}}" class="item-thumbnail-left">
       <img ng-src="{{ event.owner.picture }}">
-      <p>{{ event.owner.displayName }}
-        Is interested in <span ng-repeat="tag in event.tags">{{tag}} </span> <span ng-if="event.time">at {{event.time.hh}}:{{event.time.mm}}</span>
+      <p>
+        <span ng-if="event.myEvent">You created </span>
+        <span ng-if="!event.myEvent">{{ event.owner.displayName }} Is interested in </span>
+        <span ng-repeat="tag in event.tags">{{tag}} </span> <span ng-if="event.time">at {{event.time.hh}}:{{event.time.mm}}</span> {{event.status}}
       </p>
     </a>
   </div>

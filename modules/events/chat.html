@@ -1,0 +1,11 @@
+<ion-header-bar class="bar-positive">
+  <button class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()"></button>
+  <h1 class="title">Event Invite</h1>
+</ion-header-bar>
+<ion-content padding="false" scroll="true">
+<p>{{message}}</p>
+  <div class="bar bar-footer">
+
+  <textarea placeholder="Type in here..." ng-keypress="sendMessage($event)" ></textarea>
+  </div>
+</ion-content>
