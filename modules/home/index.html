@@ -2,10 +2,10 @@
   <button class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()"></button>
   <h1 class="title">{{user.displayName}}</h1>
   <button class="button button-clear button-icon ion-ios7-people">
-    <span ng-show="newMessages.length" class="badge badge-assertive">{{newMessages.length}}</span>
+    <span ng-show="unreadCount" class="badge badge-assertive">{{unreadCount}}</span>
   </button>
 </ion-header-bar>
-<ion-content padding="true" scroll="false">
+<ion-content padding="true" scroll="true">
   <button class="button button-full button-positive icon-left ion-person" ng-click="modals.modalEvent.show()">I'm available now!</button>
   <div class="item item-divider" style="margin: 2rem 0 1rem 0">
     My SnapMeets

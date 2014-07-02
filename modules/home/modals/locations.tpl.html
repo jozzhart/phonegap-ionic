@@ -6,9 +6,9 @@
   </ion-header-bar>
   <ion-content padding="false" scroll="true">
     <ul class="list" style="height:300px;">
-      <li ng-repeat="location in locations" class="item item-thumbnail-left item-toggle">
+      <li ng-click="setLocation(location)" ng-repeat="location in locations" class="item item-thumbnail-left">
         <img ng-src="{{ location.picture }}">
-        <a ng-click="setLocation(location)">{{ location.name }}</a>
+        <a href >{{ location.name }}</a>
       </li>
     </ul>
     <div class="padding">
