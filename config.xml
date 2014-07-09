@@ -62,6 +62,9 @@
         <param name="APP_NAME" value="comrades" />
     </gap:plugin>
     <gap:plugin name="com.phonegap.plugin.statusbar" version="1.0.1"/>
+    <gap:plugin name="nl.x-services.plugins.launchmyapp" version="3.2.0">
+        <param name="URL_SCHEME" value="comrades" />
+    </gap:plugin>
 
     <!--
         <gap:plugin name="Example" />
