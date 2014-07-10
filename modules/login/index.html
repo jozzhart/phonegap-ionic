@@ -1,0 +1,27 @@
+<div id="example-full-buttons" class="ionic-body">
+  <div class="bar bar-header">
+    <div class="h1 title">Login</div>
+  </div>
+  <div class="row responsive-sm">
+    <div class="col">
+      <div class="content has-header padding" ng-if="!loggingIn" style="height:100px">
+        <a ng-click="login()" class="button button-block button-positive"><i class="fa fa-facebook-square fa-lg"></i> Login via Facebook</a>
+      </div>
+      <div class="content has-header padding" ng-if="loggingIn" style="height:100px">
+        Logging In
+      </div>
+    </div>
+  </div>
+  <div class="row responsive-sm">
+    <div class="col">
+      <h2>Email</h2>
+      <div class="content padding">
+        <input type="email" style="border:1px solid red" ng-model="email" />
+      </div>
+      <div class="content padding" ng-if="!loggingIn" style="height:100px">
+        <a ng-click="loginEmail()" class="button button-block button-positive"><i class="ion-email" style="font-size:35px;"></i> Email</a>
+      </div>
+    </div>
+  </div>
+  <h1 ng-if="message">{{message}}</h1>
+</div>
