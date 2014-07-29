@@ -1,16 +1,17 @@
-<ion-header-bar class="bar-positive">
+<ion-header-bar>
   <button class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()"></button>
   <h1 class="title">{{user.displayName}}</h1>
   <button class="button button-clear button-icon ion-ios7-people">
     <span ng-show="unreadCount" class="badge badge-assertive">{{unreadCount}}</span>
   </button>
 </ion-header-bar>
-<ion-content padding="true" scroll="true">
-  <button class="button button-full button-positive icon-left ion-person" ng-click="modals.modalEvent.show()">I'm available now!</button>
-  <div class="item item-divider" style="margin: 2rem 0 1rem 0">
-    My SnapMeets
-  </div>
-  <div class="messages">
+<ion-content padding="false" scroll="true" class="home">
+  <button class="button button-full button-energized" ng-click="" >who.</button>
+  <button class="button button-full button-positive" ng-click="" >what.</button>
+  <button class="button button-full button-calm" ng-click="" >where.</button>
+  <button class="button button-full orange" ng-click="" >when.</button>
+  <button class="button button-full pink" ng-click="" >why.</button>
+  <!-- <div class="messages">
     <a ng-repeat="event in myEvents" href="{{event.url}}" class="item-thumbnail-left">
       <img ng-src="{{ event.owner.picture }}">
       <p>
@@ -24,5 +25,5 @@
 
       </p>
     </a>
-  </div>
+  </div> -->
 </ion-content>
