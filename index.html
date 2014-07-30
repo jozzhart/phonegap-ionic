@@ -32,7 +32,11 @@
 
       document.addEventListener("deviceready", function () {
 
-        console.log('location', window.location);
+        function handleOpenURL(url) {
+          setTimeout(function() {
+            alert("received url: " + url);
+          }, 0);
+        }
 
 
         if (typeof FB == 'undefined') {
