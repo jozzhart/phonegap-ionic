@@ -28,25 +28,11 @@
     <script src="PushNotification.js"></script>
 
 
+    <script src="js/app.js"></script>
+
     <script type="text/javascript" charset="utf-8">
 
-      function handleOpenURL(url) {
-        console.log("received url: " + url);
-      }
-
       document.addEventListener("deviceready", function () {
-
-        function handleOpenURL(url) {
-          console.log("received url: " + url);
-        }
-
-        function handleOpenURL(url) {
-          setTimeout(function() {
-            alert("received url: " + url);
-          }, 0);
-        }
-
-
         if (typeof FB == 'undefined') {
           alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
         }
