@@ -30,7 +30,15 @@
 
     <script type="text/javascript" charset="utf-8">
 
+      function handleOpenURL(url) {
+        console.log("received url: " + url);
+      }
+
       document.addEventListener("deviceready", function () {
+
+        function handleOpenURL(url) {
+          console.log("received url: " + url);
+        }
 
         function handleOpenURL(url) {
           setTimeout(function() {
