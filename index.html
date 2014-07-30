@@ -34,15 +34,18 @@
 
       function handleOpenURL(url) {
         console.log("received url from index: " + url);
+
+
+        var body = document.getElementsByTagName("body")[0];
+        var angularDomElement = document.getElementById('wrapper')[0];
+        var bodyScope = angular.element(body).scope();
+        var scope = angular.element(angularDomElement).scope();
+
+        console.log(bodyScope);
+        console.log(scope);
       }
 
-      var body = document.getElementsByTagName("body")[0];
-      var angularDomElement = document.getElementById('wrapper')[0];
-      var bodyScope = angular.element(body).scope();
-      var scope = angular.element(angularDomElement).scope();
 
-      console.log(bodyScope);
-      console.log(scope);
 
 
       document.addEventListener("deviceready", function () {
