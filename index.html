@@ -37,12 +37,9 @@
 
 
         var body = document.getElementsByTagName("body")[0];
-        var angularDomElement = document.getElementById('wrapper')[0];
-        var bodyScope = angular.element(body).scope();
-        var scope = angular.element(angularDomElement).scope();
+        var scope = angular.element(body).scope();
 
-        console.log(bodyScope);
-        console.log(scope);
+        scope.launch(url);
       }
 
 
