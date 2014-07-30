@@ -32,6 +32,19 @@
 
     <script type="text/javascript" charset="utf-8">
 
+      function handleOpenURL(url) {
+        console.log("received url from index: " + url);
+      }
+
+      var body = document.getElementsByTagName("body")[0];
+      var angularDomElement = document.getElementById('wrapper')[0];
+      var bodyScope = angular.element(body).scope();
+      var scope = angular.element(angularDomElement).scope();
+
+      console.log(bodyScope);
+      console.log(scope);
+
+
       document.addEventListener("deviceready", function () {
         if (typeof FB == 'undefined') {
           alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
