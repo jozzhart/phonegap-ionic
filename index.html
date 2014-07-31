@@ -27,16 +27,9 @@
     <script src="facebook-js-sdk.js"></script>
     <script src="PushNotification.js"></script>
 
-
     <script src="js/app.js"></script>
 
     <script type="text/javascript" charset="utf-8">
-
-      function handleOpenURL(url) {
-        var body = document.getElementsByTagName("body")[0];
-        var scope = angular.element(body).scope();
-        scope.launch(url);
-      }
 
       document.addEventListener("deviceready", function () {
         if (typeof FB == 'undefined') {
